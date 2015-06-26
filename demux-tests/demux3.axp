@@ -1,0 +1,207 @@
+<patch-1.0>
+   <obj type="disp/dial p" sha="5ff4edecce7038619b91d1d056c33eecbc4eaf30" name="dial_2" x="434" y="28">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/dial p" sha="1f21216639bb798a4ea7902940999a5bcfd0de90" name="c1" x="98" y="56">
+      <params>
+         <frac32.u.map name="value" value="45.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="osc/sine" sha="57fd153c89df1299ed1ecbe27c961ac52732ab5" name="sine_1" x="560" y="56">
+      <params>
+         <frac32.s.map name="pitch" value="-13.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/vu" sha="3e0f3adebb3336fad05a3e96926f88c2a603c343" name="vu_1" x="910" y="70">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/dial p" sha="5ff4edecce7038619b91d1d056c33eecbc4eaf30" name="dial_3" x="434" y="98">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux3" sha="22ab980fcf4f74f3a561818f5af88a927916b9ce" name="demux3_1" x="238" y="112">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux3" sha="d1711f695800f5691cc0d931eb686d48bcc26376" name="demux3_2" x="742" y="112">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/vu" sha="3e0f3adebb3336fad05a3e96926f88c2a603c343" name="vu_2" x="910" y="126">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/dial p" sha="5ff4edecce7038619b91d1d056c33eecbc4eaf30" name="dial_4" x="434" y="168">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/i radio 8 h" sha="ea2c1e474ffa7f12f0631acd25dc25c667c62408" name="i_1" x="56" y="182">
+      <params>
+         <int32.hradio name="value" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/vu" sha="3e0f3adebb3336fad05a3e96926f88c2a603c343" name="vu_3" x="910" y="182">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/i radio 8 h" sha="ea2c1e474ffa7f12f0631acd25dc25c667c62408" name="i_11" x="560" y="210">
+      <params>
+         <int32.hradio name="value" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/i" sha="f181c855026fdce66f3c38cd8c5438343d6f0869" name="i_2" x="910" y="378">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/button" sha="15ee4f76478131dcc3e0ff8d36be5480bdb1b7d4" name="button_1" x="84" y="392">
+      <params>
+         <bool32.mom name="b" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="bool_1" x="420" y="392">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/i" sha="f379e2b7efb6169f8e7327be5b09362609656408" name="i_10" x="602" y="392">
+      <params>
+         <int32 name="value" value="7"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux3" sha="6d8c5dd1ac3e98f66f85c08929629eeb5a0e0f2b" name="demux3_3" x="238" y="420">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux3" sha="0695e28cde4212152cedf74590a2217b7930e761" name="demux3_4" x="756" y="420">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/i" sha="f181c855026fdce66f3c38cd8c5438343d6f0869" name="i_5" x="910" y="434">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="bool_2" x="420" y="448">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/i" sha="f181c855026fdce66f3c38cd8c5438343d6f0869" name="i_6" x="910" y="490">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/i radio 8 h" sha="ea2c1e474ffa7f12f0631acd25dc25c667c62408" name="i_3" x="56" y="504">
+      <params>
+         <int32.hradio name="value" value="4"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/bool" sha="dbe010de4c0550687a72792c4584e4c4964751a6" name="bool_3" x="420" y="504">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/i radio 8 h" sha="ea2c1e474ffa7f12f0631acd25dc25c667c62408" name="i_4" x="588" y="532">
+      <params>
+         <int32.hradio name="value" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source name="c1 out"/>
+         <dest name="demux3_1 in"/>
+      </net>
+      <net>
+         <source name="i_1 out"/>
+         <dest name="demux3_1 s"/>
+      </net>
+      <net>
+         <source name="demux3_1 out0"/>
+         <dest name="dial_2 in"/>
+      </net>
+      <net>
+         <source name="demux3_1 out1"/>
+         <dest name="dial_3 in"/>
+      </net>
+      <net>
+         <source name="demux3_1 out2"/>
+         <dest name="dial_4 in"/>
+      </net>
+      <net>
+         <source name="sine_1 wave"/>
+         <dest name="demux3_2 in"/>
+      </net>
+      <net>
+         <source name="i_11 out"/>
+         <dest name="demux3_2 s"/>
+      </net>
+      <net>
+         <source name="demux3_2 out0"/>
+         <dest name="vu_1 in"/>
+      </net>
+      <net>
+         <source name="demux3_2 out1"/>
+         <dest name="vu_2 in"/>
+      </net>
+      <net>
+         <source name="demux3_2 out2"/>
+         <dest name="vu_3 in"/>
+      </net>
+      <net>
+         <source name="button_1 o"/>
+         <dest name="demux3_3 in"/>
+      </net>
+      <net>
+         <source name="i_3 out"/>
+         <dest name="demux3_3 s"/>
+      </net>
+      <net>
+         <source name="demux3_3 out0"/>
+         <dest name="bool_1 in"/>
+      </net>
+      <net>
+         <source name="demux3_3 out1"/>
+         <dest name="bool_2 in"/>
+      </net>
+      <net>
+         <source name="demux3_3 out2"/>
+         <dest name="bool_3 in"/>
+      </net>
+      <net>
+         <source name="i_10 out"/>
+         <dest name="demux3_4 in"/>
+      </net>
+      <net>
+         <source name="i_4 out"/>
+         <dest name="demux3_4 s"/>
+      </net>
+      <net>
+         <source name="demux3_4 out0"/>
+         <dest name="i_2 in"/>
+      </net>
+      <net>
+         <source name="demux3_4 out1"/>
+         <dest name="i_5 in"/>
+      </net>
+      <net>
+         <source name="demux3_4 out2"/>
+         <dest name="i_6 in"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+      <MidiChannel>1</MidiChannel>
+      <NPresets>8</NPresets>
+      <NPresetEntries>32</NPresetEntries>
+      <NModulationSources>8</NModulationSources>
+      <NModulationTargetsPerSource>8</NModulationTargetsPerSource>
+      <Author>Jan Vantomme</Author>
+      <License>GPL</License>
+   </settings>
+   <notes><![CDATA[]]></notes>
+</patch-1.0>

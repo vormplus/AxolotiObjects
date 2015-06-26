@@ -1,0 +1,466 @@
+<objdefs>
+	<obj.normal id="demux8" sha="3bf8bcafb6bc9ecda400b224b8f58af8b7043f08">
+		<sDescription>demultiplexer. Output is o1 when s &lt; 1, i[i] when....</sDescription>
+		<author>Jan Vantomme</author>
+		<license>BSD</license>
+		<inlets>
+			<frac32 name="in" description="input 0"/>
+			<int32 class="axoloti.inlets.InletInt32Pos" name="s" description="select"/>
+		</inlets>
+		<outlets>
+			<frac32 name="out0" description="output 0" SumBuffer="false"/>
+			<frac32 name="out1" description="output 1" SumBuffer="false"/>
+			<frac32 name="out2" description="output 2" SumBuffer="false"/>
+			<frac32 name="out3" description="output 3" SumBuffer="false"/>
+			<frac32 name="out4" description="output 4" SumBuffer="false"/>
+			<frac32 name="out5" description="output 5" SumBuffer="false"/>
+			<frac32 name="out6" description="output 6" SumBuffer="false"/>
+			<frac32 name="out7" description="output 7" SumBuffer="false"/>
+		</outlets>
+		<displays/>
+		<params/>
+		<attribs/>
+		<code.krate><![CDATA[
+			switch ( %s% > 0 ? %s% : 0 ) {
+				case 0: 
+					%out0% = %in%; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 1: 
+					%out0% = 0.0; 
+					%out1% = %in%; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 2: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = %in%; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 3: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = %in%; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 4: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = %in%; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 5: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = %in%; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 6: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = %in%; 
+					%out7% = 0.0; 
+					break;
+				case 7: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = %in%; 
+					break;						
+				default: 
+					%out0% = %in%; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+			}
+		]]></code.krate>
+	</obj.normal>
+	<obj.normal id="demux8" sha="f3a7f6261b4d20c02ec9a797c9706265adcb9a4e">
+		<sDescription>demultiplexer. Output is o1 when s &lt; 1, i[i] when....</sDescription>
+		<author>Jan Vantomme</author>
+		<license>BSD</license>
+		<inlets>
+			<frac32buffer name="in" description="input 0"/>
+			<int32 class="axoloti.inlets.InletInt32Pos" name="s" description="select"/>
+		</inlets>
+		<outlets>
+			<frac32buffer name="out0" description="output 0" SumBuffer="false"/>
+			<frac32buffer name="out1" description="output 1" SumBuffer="false"/>
+			<frac32buffer name="out2" description="output 2" SumBuffer="false"/>
+			<frac32buffer name="out3" description="output 3" SumBuffer="false"/>
+			<frac32buffer name="out4" description="output 4" SumBuffer="false"/>
+			<frac32buffer name="out5" description="output 5" SumBuffer="false"/>
+			<frac32buffer name="out6" description="output 6" SumBuffer="false"/>
+			<frac32buffer name="out7" description="output 7" SumBuffer="false"/>
+		</outlets>
+		<displays/>
+		<params/>
+		<attribs/>
+		<code.srate><![CDATA[
+			switch ( %s% > 0 ? %s% : 0 ) {
+				case 0: 
+					%out0% = %in%; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 1: 
+					%out0% = 0.0; 
+					%out1% = %in%; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 2: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = %in%; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 3: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = %in%; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 4: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = %in%; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 5: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = %in%; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 6: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = %in%; 
+					%out7% = 0.0; 
+					break;
+				case 7: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = %in%; 
+					break;						
+				default: 
+					%out0% = %in%; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+			}
+		]]></code.srate>
+	</obj.normal>
+	<obj.normal id="demux8" sha="4d72a9066737c334a9147225c30863aa0f74f31e">
+		<sDescription>output multiplexer. Output is o1 when s &lt; 1, i[i] when....</sDescription>
+		<author>Jan Vantomme</author>
+		<license>BSD</license>
+		<inlets>
+			<bool32 name="in" description="input 0"/>
+			<int32 class="axoloti.inlets.InletInt32Pos" name="s" description="select"/>
+		</inlets>
+		<outlets>
+			<bool32 name="out0" description="output 0" SumBuffer="false"/>
+			<bool32 name="out1" description="output 1" SumBuffer="false"/>
+			<bool32 name="out2" description="output 2" SumBuffer="false"/>
+			<bool32 name="out3" description="output 3" SumBuffer="false"/>
+			<bool32 name="out4" description="output 4" SumBuffer="false"/>
+			<bool32 name="out5" description="output 5" SumBuffer="false"/>
+			<bool32 name="out6" description="output 6" SumBuffer="false"/>
+			<bool32 name="out7" description="output 7" SumBuffer="false"/>
+		</outlets>
+		<displays/>
+		<params/>
+		<attribs/>
+		<code.krate><![CDATA[
+			switch ( %s% > 0 ? %s% : 0 ) {
+				case 0: 
+					%out0% = %in%; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 1: 
+					%out0% = 0.0; 
+					%out1% = %in%; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 2: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = %in%; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 3: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = %in%; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 4: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = %in%; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 5: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = %in%; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 6: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = %in%; 
+					%out7% = 0.0; 
+					break;
+				case 7: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = %in%; 
+					break;						
+				default: 
+					%out0% = %in%; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+			}
+		]]></code.krate>
+	</obj.normal>
+	<obj.normal id="demux8" sha="ed196de7389d5e67b6863783e7c8bc3669fd79d0">
+		<sDescription>demultiplexer. Output is o1 when s &lt; 1, i[i] when....</sDescription>
+		<author>Jan Vantomme</author>
+		<license>BSD</license>
+		<inlets>
+			<int32 name="in" description="input 0"/>
+			<int32 class="axoloti.inlets.InletInt32Pos" name="s" description="select"/>
+		</inlets>
+		<outlets>
+			<int32 name="out0" description="output 0" SumBuffer="false"/>
+			<int32 name="out1" description="output 1" SumBuffer="false"/>
+			<int32 name="out2" description="output 2" SumBuffer="false"/>
+			<int32 name="out3" description="output 3" SumBuffer="false"/>
+			<int32 name="out4" description="output 4" SumBuffer="false"/>
+			<int32 name="out5" description="output 5" SumBuffer="false"/>
+			<int32 name="out6" description="output 6" SumBuffer="false"/>
+			<int32 name="out7" description="output 7" SumBuffer="false"/>
+		</outlets>
+		<displays/>
+		<params/>
+		<attribs/>
+		<code.krate><![CDATA[
+			switch ( %s% > 0 ? %s% : 0 ) {
+				case 0: 
+					%out0% = %in%; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 1: 
+					%out0% = 0.0; 
+					%out1% = %in%; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 2: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = %in%; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 3: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = %in%; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 4: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = %in%; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 5: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = %in%; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+				case 6: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = %in%; 
+					%out7% = 0.0; 
+					break;
+				case 7: 
+					%out0% = 0.0; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = %in%; 
+					break;						
+				default: 
+					%out0% = %in%; 
+					%out1% = 0.0; 
+					%out2% = 0.0; 
+					%out3% = 0.0; 
+					%out4% = 0.0; 
+					%out5% = 0.0; 
+					%out6% = 0.0; 
+					%out7% = 0.0; 
+					break;
+			}
+		]]></code.krate>
+	</obj.normal>	
+</objdefs>

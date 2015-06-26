@@ -1,0 +1,49 @@
+Datatypes
+------------------------------
+blue:   frac32
+red:    frac32buffer
+yellow: bool32
+green:  int32
+
+
+Hashes used in the objects
+------------------------------
+
+Hashes created with http://www.sha1-online.com/
+
+Used Text       SHA-1 Hash
+--------------------------------------------------------
+demux2blue      94b6756a97a5d85d4b5f24755b84ad2974ba3426
+demux2red       4524e2bbed8d1924783398a22a401659c322e098
+demux2yellow    18f63a0f285e975d263734d62e6f195755097a32
+demux2green     b743495111c55d24ad2479cae8308f1537f5a0cf
+
+demux3blue      22ab980fcf4f74f3a561818f5af88a927916b9ce
+demux3red       d1711f695800f5691cc0d931eb686d48bcc26376
+demux3yellow    6d8c5dd1ac3e98f66f85c08929629eeb5a0e0f2b
+demux3green     0695e28cde4212152cedf74590a2217b7930e761
+
+demux4blue      dadcab5eac4b085cfce564369ae8cca7a1e03f55
+demux4red       f3b0ade9f526d8d718e275d660dcae97e3bfc116
+demux4yellow    c658e0b010642e7cfcfa5adfb389b5cc0dedd1df
+demux4green     4e30dc3eec3743c93fc552ab30d96ef00412025e
+
+demux5blue      3126e138cf7a2b82c7d3e35a2f2c34d0cfc9ec2b
+demux5red       fb9872d285fb6fb37f63aa96fa3f2358887bea32
+demux5yellow    2bcd7b31a949716bd28a1c32f5d308d087430ffb
+demux5green     acc7b1661677d1ae3f2445fdf72f0c10bd2fd4d6
+
+demux6blue      800881226b44ebb521c42bb28146a3f6eec73613
+demux6red       c7418a215b50c63cb72a9d16a4dbb8e36b57f072
+demux6yellow    0d0e81eefcd190d352d8aa4e0b27f66ef38ecec8
+demux6green     792d7887f019f80e72cf794a11f04edeac88fa7e
+
+demux7blue      f6ffd135bc1adc7962196c7b76f474f09f86f995
+demux7red       65ab27f22f44f65aa2a686f2ccde420ba3189931
+demux7yellow    98beb14f22be23f3a57f29701a55a8600166c28f
+demux7green     ab2bb0c71ae3ad233db43fb7aae90fc26e66108b
+
+demux8blue      3bf8bcafb6bc9ecda400b224b8f58af8b7043f08
+demux8red       f3a7f6261b4d20c02ec9a797c9706265adcb9a4e
+demux8yellow    4d72a9066737c334a9147225c30863aa0f74f31e
+demux8green     ed196de7389d5e67b6863783e7c8bc3669fd79d0
